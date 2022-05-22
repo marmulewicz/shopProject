@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220522 17:12:40.576" rpa="false" schemaversion="3">
+<suite id="s1" name="Shopping" source="C:\Users\Marcin\PycharmProjects\shopProject\shopping.robot">
+<kw name="Prepare Env" type="SETUP">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220522 17:12:40.693" endtime="20220522 17:12:40.693"/>
+</kw>
+<status status="PASS" starttime="20220522 17:12:40.693" endtime="20220522 17:12:40.693"/>
+</kw>
+<test id="s1-t1" name="Login" line="34">
+<kw name="Open shop main page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${shopurl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220522 17:12:40.693" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220522 17:12:40.693" endtime="20220522 17:12:52.701"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220522 17:12:52.701" endtime="20220522 17:12:52.823"/>
+</kw>
+<status status="PASS" starttime="20220522 17:12:40.693" endtime="20220522 17:12:52.823"/>
+</kw>
+<kw name="Login">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${sign_in_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:12:52.823" endtime="20220522 17:12:52.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_in_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220522 17:12:52.865" level="INFO">Clicking element 'class:login'.</msg>
+<status status="PASS" starttime="20220522 17:12:52.865" endtime="20220522 17:13:07.774"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:07.774" endtime="20220522 17:13:07.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:07.804" level="INFO">Typing text 'wsb@onet.pl' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220522 17:13:07.804" endtime="20220522 17:13:07.871"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:07.872" endtime="20220522 17:13:07.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:07.899" level="INFO">Typing text 'wsbstudent' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20220522 17:13:07.899" endtime="20220522 17:13:07.967"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${submit_login}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:07.967" endtime="20220522 17:13:07.990"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:07.990" level="INFO">Clicking button 'id:SubmitLogin'.</msg>
+<status status="PASS" starttime="20220522 17:13:07.990" endtime="20220522 17:13:21.766"/>
+</kw>
+<status status="PASS" starttime="20220522 17:12:52.823" endtime="20220522 17:13:21.767"/>
+</kw>
+<status status="PASS" starttime="20220522 17:12:40.693" endtime="20220522 17:13:21.767"/>
+</test>
+<test id="s1-t2" name="Add items to cart" line="37">
+<kw name="Search">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${search}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:21.768" endtime="20220522 17:13:21.791"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search}</arg>
+<arg>${input_search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:21.791" level="INFO">Typing text 'dress' into text field 'id:search_query_top'.</msg>
+<status status="PASS" starttime="20220522 17:13:21.791" endtime="20220522 17:13:21.861"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${submit_search}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:21.861" endtime="20220522 17:13:21.885"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:21.885" level="INFO">Clicking button 'name:submit_search'.</msg>
+<status status="PASS" starttime="20220522 17:13:21.885" endtime="20220522 17:13:27.384"/>
+</kw>
+<status status="PASS" starttime="20220522 17:13:21.768" endtime="20220522 17:13:27.385"/>
+</kw>
+<kw name="Add to Cart">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220522 17:13:27.386" endtime="20220522 17:13:27.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220522 17:13:27.415" level="INFO">Clicking element 'xpath://body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[3]/div[1]/div[1]/div[1]/a[1]/img[1]'.</msg>
+<status status="PASS" starttime="20220522 17:13:27.415" endtime="20220522 17:13:27.477"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${size}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20220522 17:13:32.754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-1.png"&gt;&lt;img src="screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220522 17:13:32.754" level="FAIL">Element with locator 'id:group_1' not found.</msg>
+<status status="FAIL" starttime="20220522 17:13:27.477" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${size}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${color}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${color}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${continue}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<status status="FAIL" starttime="20220522 17:13:27.385" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Next Search">
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Add next to Cart">
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<kw name="Pay">
+<status status="NOT RUN" starttime="20220522 17:13:32.754" endtime="20220522 17:13:32.754"/>
+</kw>
+<status status="FAIL" starttime="20220522 17:13:21.767" endtime="20220522 17:13:32.754">Element with locator 'id:group_1' not found.</status>
+</test>
+<status status="FAIL" starttime="20220522 17:12:40.583" endtime="20220522 17:13:32.754"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Shopping">Shopping</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
